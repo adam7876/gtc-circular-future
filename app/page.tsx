@@ -49,8 +49,8 @@ export default function Home() {
       </section>
 
       <section className="statement">
-        <p>OUR BELIEF</p><h2>地球沒有真正的垃圾，<br/>只有<span>放錯位置的資源。</span></h2>
-        <div className="statement-side">我們從治理的難題出發，以可被市場採用的材料與商品，讓循環經濟真正運轉。</div>
+        <p>OUR BELIEF</p><h2>消除廢棄與污染，<br/>讓自然<span>重新再生。</span></h2>
+        <div className="statement-side">從減量、再用、維修、翻新、再製造、再利用到回收，GTC 以 7R 思維重新安排材料的生命週期。</div>
       </section>
 
       <section className="technology" id="technology">
@@ -76,8 +76,8 @@ export default function Home() {
       </section>
 
       <section className="products-preview">
-        <div className="section-intro"><p className="eyebrow">SIWOOD PRODUCTS · 03</p><h2>循環材料，<br/>成為日常使用的商品</h2><p>司木系列以再生複合材料為基礎，依耐候、耐燃與強度需求調整配方，應用於物流、營建與生活空間。</p></div>
-        <div className="product-row">{products.slice(0,3).map((p,i)=><Link className={`product-card tone-${i+1}`} href={`/products/${p.slug}`} key={p.slug}><span>{p.category}</span><div className={`product-object object-${p.slug}`}><i></i><i></i><i></i></div><h3>{p.name}</h3><p>{p.short}</p><b>了解商品 →</b></Link>)}</div>
+        <div className="section-intro"><p className="eyebrow">PRODUCT CATALOG · 03</p><h2>看得見材料，<br/>也看得見它被使用</h2><p>從五大司木材料到建築、家具與循環載具，新產品頁以型錄實圖重新整理，讓規格與場景更容易理解。</p></div>
+        <div className="product-row">{[products[0],products[5],products[7]].map((p)=><Link className="product-card" href={`/products/${p.slug}`} key={p.slug}><span>{p.category} / {p.english}</span><figure className="product-photo"><img src={p.image} alt={`${p.name}產品型錄`}/></figure><h3>{p.name}</h3><p>{p.short}</p><b>了解商品 →</b></Link>)}</div>
         <Link className="button outline" href="/products">瀏覽完整商品系列</Link>
       </section>
 
