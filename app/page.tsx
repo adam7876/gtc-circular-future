@@ -35,18 +35,17 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">MIXED WASTE PLASTIC RESOURCEIZATION</p>
-          <h1>讓廢棄物<br/>回到<span>資源的位置</span></h1>
+          <div className="hero-kicker"><span>GTC / 2026</span><p className="eyebrow">MIXED WASTE PLASTIC RESOURCEIZATION</p></div>
+          <h1><span className="hero-line">讓廢棄物，</span><span className="hero-line hero-emphasis">回到資源的位置。</span></h1>
           <p className="hero-lead">以混雜廢塑資源化技術，串連材料、製造、使用與回收，讓一次性的終點成為下一次生產的起點。</p>
           <div className="hero-actions"><a className="button primary" href="#technology">探索循環技術</a><Link className="text-link" href="/products">查看司木商品 <span>→</span></Link></div>
         </div>
-        <div className="hero-visual" aria-label="從混雜廢塑到再生材料的循環概念">
-          <div className="orbit orbit-one"></div><div className="orbit orbit-two"></div>
-          <div className="material material-a"></div><div className="material material-b"></div><div className="material material-c"></div>
-          <div className="core"><b>不使用火</b><i></i><b>不使用水</b><span>RESOURCE<br/>LOOP</span></div>
-          <p className="visual-note">把無法分類的混雜廢塑，轉化為可持續循環的高分子材料。</p>
+        <div className="hero-facts" aria-label="核心技術重點">
+          <div className="hero-fact-index">01</div>
+          <p>RESOURCE<br/>RECOVERY</p>
+          <dl><div><dt>製程</dt><dd>不使用火、不使用水</dd></div><div><dt>材料</dt><dd>混雜廢塑複合材料</dd></div><div><dt>結果</dt><dd>可回收、可再製造</dd></div></dl>
+          <div className="hero-fact-foot"><span>TAIWAN</span><span>→ GLOBAL</span></div>
         </div>
-        <div className="hero-index"><b>01</b><span>/ 04</span></div>
       </section>
 
       <section className="statement">
@@ -57,7 +56,7 @@ export default function Home() {
       <section className="technology" id="technology">
         <div className="section-intro"><p className="eyebrow">CORE TECHNOLOGY · 01</p><h2>從混雜廢塑，<br/>到新型複合材料</h2></div>
         <div className="process-grid">
-          <div className="process-visual"><span>INPUT</span><div className="waste-cloud">PE<small>PP</small><b>PET</b><i>PS</i></div><div className="flow-line"></div><div className="material-block"></div><strong>SIWOOD<br/>MATERIAL</strong></div>
+          <figure className="process-photo"><img src="/factory-process.png" alt="司木材料製造現場"/><figcaption><span>台南善化</span><b>司木材料製造與應用紀錄</b></figcaption></figure>
           <div className="process-copy"><p>以高精度、精細化自動分選為基礎，將篩上輕質料轉化為新型複合高分子材料。製程回歸自然，不使用火與水，降低對水、空氣與土壤造成二次污染的風險。</p>
             <div className="feature-list"><article><b>01</b><h3>減少二次污染</h3><p>製程不以焚燒或水洗為核心。</p></article><article><b>02</b><h3>材料持續循環</h3><p>產品使用後可再回收、再製造。</p></article><article><b>03</b><h3>高價值再利用</h3><p>材料性能可應用於替代木材的產品。</p></article></div>
           </div>
@@ -84,6 +83,7 @@ export default function Home() {
 
       <section className="about" id="about">
         <div className="section-intro"><p className="eyebrow">OUR JOURNEY · 04</p><h2>從製造走向<br/>全球環境治理</h2></div>
+        <figure className="team-photo"><img src="/technology-team.jpg" alt="GTC 技術團隊研討垃圾治理方案"/><figcaption>技術團隊進行垃圾治理方案研討</figcaption></figure>
         <div className="timeline">{milestones.map(([year,title,desc])=><article key={year}><b>{year}</b><h3>{title}</h3><p>{desc}</p></article>)}</div>
       </section>
 
