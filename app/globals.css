@@ -35,3 +35,22 @@
 .detail-material{margin-top:50px;font-size:11px;color:var(--muted)}.detail-material b{font-size:16px;color:var(--ink)}
 @media(max-width:900px){.product-row,.catalog-grid{grid-template-columns:1fr 1fr}.detail-hero{grid-template-columns:1fr}}
 @media(max-width:640px){.product-row,.catalog-grid{grid-template-columns:1fr}.catalog-tabs{margin-inline:0}.catalog-note div{grid-template-columns:repeat(2,1fr)}.catalog-image{height:260px}.detail-product-image{margin-top:25px}}
+
+/* Swiss editorial system: one neutral palette, one accent, disciplined type scale */
+:root{--ink:#171a18;--forest:#171c19;--deep:#111411;--accent:#a9bf4d;--paper:#f4f3ee;--paper-dark:#e7e6e0;--muted:#626762;--line:rgba(23,26,24,.18)}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;font-weight:400;letter-spacing:.005em}
+p{line-height:1.75}.eyebrow{font-size:9px;line-height:1.5;letter-spacing:.18em}
+.nav-wrap{height:78px;padding-inline:6vw}.nav-wrap nav{gap:30px;font-size:12px}.nav-cta{font-size:12px}.brand-mark{width:30px;height:30px}.brand{grid-template-columns:30px auto}
+.hero{min-height:760px;padding:148px 6vw 64px;grid-template-columns:minmax(0,1fr) 270px;gap:9vw;background:var(--forest)}
+.hero-kicker{margin-bottom:56px}.hero h1{max-width:980px;font-size:clamp(48px,5.8vw,82px);line-height:1.13;letter-spacing:-.045em;font-weight:650}.hero-emphasis{color:var(--accent)}
+.hero-lead{max-width:540px;margin-top:38px;font-size:15px;line-height:1.9}.hero-actions{margin-top:32px}.button{padding:13px 19px}.hero-facts{min-height:430px}.hero-fact-index{font-size:66px}
+.statement{padding:128px 7vw;grid-template-columns:.55fr 1.65fr .75fr;gap:6vw}.statement h2{font-size:clamp(34px,3.8vw,55px);line-height:1.3;letter-spacing:-.035em}.statement-side{max-width:260px}
+.technology,.products-preview,.about{padding:124px 7vw}.section-intro{grid-template-columns:.55fr 1.4fr .8fr;gap:6vw;margin-bottom:72px}.section-intro h2{font-size:clamp(34px,3.7vw,54px);line-height:1.23;letter-spacing:-.035em}.section-intro>p:last-child{max-width:320px;line-height:1.9}
+.process-grid{gap:8vw}.process-copy>p{font-size:15px;line-height:2}.feature-list h3{font-size:16px}.metrics b{font-size:clamp(38px,4.5vw,62px)}
+.cycle{padding:124px 7vw}.chain-list h3{font-size:19px}.product-card h3,.catalog-card-copy h2{font-size:23px;letter-spacing:-.02em}.product-card{min-height:470px}.product-photo{height:225px}
+.catalog-hero{padding:110px 7vw 88px}.catalog-hero h1{max-width:850px;font-size:clamp(44px,5.4vw,74px);line-height:1.16;letter-spacing:-.045em}.catalog-hero>p:last-child{max-width:570px;font-size:14px}
+.catalog-tabs{margin-bottom:26px}.catalog-card{min-height:505px}.catalog-image{height:260px}.catalog-card-copy p{line-height:1.75}
+.detail-hero{min-height:610px}.detail-copy h1{font-size:clamp(45px,5.8vw,76px);line-height:1.15}.detail-copy>p{font-size:14px;line-height:1.9}.detail-info h2{font-size:30px;line-height:1.5}.material-story h2{font-size:42px;line-height:1.3}
+.vision h2{font-size:clamp(34px,3.7vw,52px);line-height:1.25}.footer-lead h2{font-size:clamp(42px,5.4vw,72px);line-height:1.18}
+@media(max-width:900px){.hero{grid-template-columns:1fr 220px}.section-intro{grid-template-columns:1fr}.statement{grid-template-columns:1fr}.statement-side{max-width:520px}.catalog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.hero{min-height:700px;padding:118px 6vw 48px;grid-template-columns:1fr}.hero h1{font-size:clamp(33px,10.3vw,46px);line-height:1.2}.hero-kicker{margin-bottom:40px;display:block}.hero-kicker .eyebrow{margin-top:10px}.hero-emphasis{white-space:normal}.hero-lead{font-size:13px;line-height:1.85}.hero-actions{align-items:flex-start;flex-direction:column;gap:22px}.hero-facts{min-height:auto}.statement,.technology,.products-preview,.about,.cycle{padding-block:82px}.statement h2,.section-intro h2{font-size:33px;line-height:1.32}.catalog-hero h1{font-size:39px;line-height:1.22}.catalog-card-copy h2,.product-card h3{font-size:22px}.detail-copy h1{font-size:44px}.vision h2,.material-story h2{font-size:34px}.footer-lead h2{font-size:39px}}
