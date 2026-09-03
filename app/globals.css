@@ -56,13 +56,16 @@ p{line-height:1.75}.eyebrow{font-size:9px;line-height:1.5;letter-spacing:.18em}
 @media(max-width:640px){.hero{min-height:700px;padding:118px 6vw 48px;grid-template-columns:1fr}.hero h1{font-size:clamp(33px,10.3vw,46px);line-height:1.2}.hero-kicker{margin-bottom:40px;display:block}.hero-kicker .eyebrow{margin-top:10px}.hero-emphasis{white-space:normal}.hero-lead{font-size:13px;line-height:1.85}.hero-actions{align-items:flex-start;flex-direction:column;gap:22px}.hero-facts{min-height:auto}.statement,.technology,.products-preview,.about,.cycle{padding-block:82px}.statement h2,.section-intro h2{font-size:33px;line-height:1.32}.catalog-hero h1{font-size:39px;line-height:1.22}.catalog-card-copy h2,.product-card h3{font-size:22px}.detail-copy h1{font-size:44px}.vision h2,.material-story h2{font-size:34px}.footer-lead h2{font-size:39px}}
 
 /* Readability pass: small copy stays comfortably legible across the site */
-.eyebrow,.statement>p,.footer-lead>p,.catalog-note>p{font-size:11px;line-height:1.65}
-.nav-wrap nav,.nav-cta,.text-link,.button{font-size:14px}.brand small{font-size:9px}.hero-kicker>span{font-size:12px}
-.hero-lead,.process-copy>p,.vision>p,.detail-copy>p,.catalog-hero>p:last-child{font-size:16px}
-.statement-side,.section-intro>p:last-child,.feature-list p,.metrics span,.chain-list p,.product-card p,.catalog-card-copy p,.timeline p,.catalog-note>span{font-size:14px;line-height:1.85}
-.hero-facts dt,.product-card>span,.catalog-card-copy>span,.detail-copy>span{font-size:11px}.hero-facts dd{font-size:13px}.hero-fact-foot{font-size:11px}
-.feature-list article>b,.catalog-card-copy b,.product-card>b,.catalog-number{font-size:13px}.chain-list b{font-size:13px}
-.process-photo figcaption span,.process-photo figcaption b,.team-photo figcaption{font-size:13px}.metrics>p{font-size:12px}
-.timeline b{font-size:14px}.footer-meta>div,.detail-nav,.mini-footer,.loop-steps{font-size:14px}.copyright{font-size:11px;line-height:1.7}.detail-material{font-size:13px}.detail-product-image figcaption{font-size:11px}
-.catalog-tabs button{font-size:14px}.catalog-tabs span{font-size:12px}
-@media(max-width:640px){.hero-lead{font-size:15px}.section-intro>p:last-child,.statement-side,.chain-list p,.product-card p,.catalog-card-copy p,.timeline p{font-size:15px}.nav-wrap .brand>span:not(.brand-mark){font-size:15px}.button,.text-link{font-size:14px}.footer-meta>div,.mini-footer{font-size:13px}}
+.eyebrow,.statement>p,.footer-lead>p,.catalog-note>p{font-size:13px;line-height:1.7;letter-spacing:.12em}
+.nav-wrap nav,.nav-cta,.text-link,.button{font-size:16px}.brand small{font-size:11px}.hero-kicker>span{font-size:14px;white-space:nowrap}.hero-kicker{flex-wrap:wrap;gap:16px 28px}
+.hero-lead,.process-copy>p,.vision>p,.catalog-hero>p:last-child,.detail-copy>p:not(.eyebrow){font-size:18px;line-height:1.85}
+.statement-side,.section-intro>p:last-child:not(.eyebrow),.feature-list p,.metrics span,.chain-list p,.product-card p,.catalog-card-copy p,.timeline p,.catalog-note>span{font-size:16px;line-height:1.85}
+.hero-facts dt,.product-card>span,.catalog-card-copy>span,.detail-copy>span{font-size:14px;letter-spacing:.06em}.hero-facts dd{font-size:15px;line-height:1.7}.hero-fact-foot{font-size:13px}
+.feature-list article>b,.catalog-card-copy b,.product-card>b,.catalog-number,.chain-list b{font-size:15px}
+.process-photo figcaption span,.process-photo figcaption b,.team-photo figcaption{font-size:15px}.metrics>p{font-size:14px;line-height:1.8}
+.timeline{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 32px}.timeline b{font-size:16px}.timeline h3,.feature-list h3{font-size:18px}
+.footer-meta>div,.detail-nav,.mini-footer,.loop-steps,.next-product{font-size:16px}.copyright{font-size:13px;line-height:1.8;opacity:.8}.detail-material{font-size:15px}.detail-product-image figcaption{font-size:13px;line-height:1.7}
+.catalog-tabs button{font-size:16px;min-width:160px}.catalog-tabs span{font-size:14px}
+:root{--muted:#4b514c}.nav-wrap nav a{opacity:.9}.brand small{opacity:.85}.hero-kicker,.hero-lead,.hero-facts>p,.hero-facts dd,.catalog-hero>p:last-child,.section-intro.light>p:last-child,.chain-list p,.footer-meta p{color:#cbd0ca}.catalog-tabs button{color:#d4d8d2}.catalog-tabs button[aria-selected="true"]{color:var(--ink)}
+@media(max-width:900px){.timeline{grid-template-columns:repeat(2,minmax(0,1fr))}.mini-footer,.next-product{flex-wrap:wrap;gap:24px}.loop-steps{flex-wrap:wrap;gap:18px}}
+@media(max-width:640px){.hero-lead,.process-copy>p,.vision>p,.catalog-hero>p:last-child,.detail-copy>p:not(.eyebrow){font-size:17px}.nav-wrap .brand>span:not(.brand-mark){font-size:16px}.timeline{grid-template-columns:1fr}.timeline article{padding-top:20px}.process-photo figcaption{position:relative;left:auto;right:auto;bottom:auto;padding:16px;gap:16px;background:var(--deep)}.process-photo:after{display:none}.process-photo figcaption b{max-width:none}.hero-facts{grid-template-columns:80px 1fr}}
