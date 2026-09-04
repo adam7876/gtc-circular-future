@@ -28,7 +28,7 @@ export default function Home() {
         </Link>
         <nav aria-label="主選單">
           <a href="#technology">核心技術</a><a href="#cycle">循環產業</a>
-          <Link href="/products">司木商品</Link><a href="#about">關於集團</a>
+          <Link href="/products">司木商品</Link><Link href="/videos">影片紀錄</Link><a href="#about">關於集團</a>
         </nav>
         <a className="nav-cta" href="#contact">洽詢合作 <span>↗</span></a>
       </header>
@@ -61,7 +61,7 @@ export default function Home() {
               <source src="/videos/fire-resistant-board-test.mp4" type="video/mp4" />
               您的瀏覽器不支援影片播放，請<a href="/videos/fire-resistant-board-test.mp4">開啟影片</a>觀看。
             </video>
-            <figcaption id="material-video-caption"><span>材料測試紀錄</span><b>防火塑料板測試影片</b></figcaption>
+            <figcaption id="material-video-caption"><span>材料測試紀錄</span><Link href="/videos#fire-resistant-board-test">影片說明與完整紀錄 →</Link></figcaption>
           </figure>
           <div className="process-copy"><p>以高精度、精細化自動分選為基礎，將篩上輕質料轉化為新型複合高分子材料。製程回歸自然，不使用火與水，降低對水、空氣與土壤造成二次污染的風險。</p>
             <div className="feature-list"><article><b>01</b><h3>減少二次污染</h3><p>製程不以焚燒或水洗為核心。</p></article><article><b>02</b><h3>材料持續循環</h3><p>產品使用後可再回收、再製造。</p></article><article><b>03</b><h3>高價值再利用</h3><p>材料性能可應用於替代木材的產品。</p></article></div>
@@ -87,6 +87,10 @@ export default function Home() {
         <Link className="button outline" href="/products">瀏覽完整商品系列</Link>
       </section>
 
+      <section className="films-preview">
+        <div><p className="eyebrow">FIELD NOTES / FILM ARCHIVE</p><h2>不只說明理念<br/>也記錄實際過程</h2><p>從環境治理、材料加工到產品應用，觀看七段現場影片。</p><Link className="button outline" href="/videos">瀏覽全部影片</Link></div>
+        <Link className="film-preview-image" href="/videos#landfill-recovery"><img src="/videos/landfill-recovery.jpg" alt="掩埋垃圾場治理影片封面" loading="lazy"/><span>掩埋垃圾場開挖治理與生產過程介紹 →</span></Link>
+      </section>
       <section className="about" id="about">
         <div className="section-intro"><p className="eyebrow">OUR JOURNEY · 04</p><h2>從製造走向<br/>全球環境治理</h2></div>
         <figure className="team-photo"><img src="/technology-team.jpg" alt="GTC 技術團隊研討垃圾治理方案"/><figcaption>技術團隊進行垃圾治理方案研討</figcaption></figure>
