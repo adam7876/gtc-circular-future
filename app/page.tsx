@@ -56,7 +56,13 @@ export default function Home() {
       <section className="technology" id="technology">
         <div className="section-intro"><p className="eyebrow">CORE TECHNOLOGY · 01</p><h2>從混雜廢塑，<br/>到新型複合材料</h2></div>
         <div className="process-grid">
-          <figure className="process-photo"><img src="/factory-process.png" alt="司木材料製造現場"/><figcaption><span>台南善化</span><b>司木材料製造與應用紀錄</b></figcaption></figure>
+          <figure className="process-photo process-video">
+            <video controls playsInline preload="none" poster="/factory-process.png" aria-label="防火塑料板測試影片" aria-describedby="material-video-caption">
+              <source src="/videos/fire-resistant-board-test.mp4" type="video/mp4" />
+              您的瀏覽器不支援影片播放，請<a href="/videos/fire-resistant-board-test.mp4">開啟影片</a>觀看。
+            </video>
+            <figcaption id="material-video-caption"><span>材料測試紀錄</span><b>防火塑料板測試影片</b></figcaption>
+          </figure>
           <div className="process-copy"><p>以高精度、精細化自動分選為基礎，將篩上輕質料轉化為新型複合高分子材料。製程回歸自然，不使用火與水，降低對水、空氣與土壤造成二次污染的風險。</p>
             <div className="feature-list"><article><b>01</b><h3>減少二次污染</h3><p>製程不以焚燒或水洗為核心。</p></article><article><b>02</b><h3>材料持續循環</h3><p>產品使用後可再回收、再製造。</p></article><article><b>03</b><h3>高價值再利用</h3><p>材料性能可應用於替代木材的產品。</p></article></div>
           </div>
