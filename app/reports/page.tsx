@@ -1,0 +1,7 @@
+import Link from "next/link"; import type { Metadata } from "next"; import {reports,reportCategories} from "./data";
+export const metadata:Metadata={title:"檢測資料｜GTC",description:"瀏覽 GTC 司木材料與產品的原始測試及檢測報告。"};
+export default function ReportsPage(){return <main className="reports-page"><header className="detail-nav"><Link href="/">GTC</Link><Link href="/products">產品型錄</Link><Link href="/videos">影片紀錄</Link></header>
+<section className="reports-intro"><p className="eyebrow">TEST REPORT ARCHIVE</p><h1>檢測資料</h1><p>集中保存材料與產品的原始測試文件<br/>檢測條件、樣品及結果請以報告原文為準</p></section>
+<nav className="report-index" aria-label="報告分類">{reportCategories.map((c,i)=><a href={`#report-category-${i}`} key={c}>{c}<span>{reports.filter(r=>r.category===c).length}</span></a>)}</nav>
+{reportCategories.map((c,i)=><section className="report-category" id={`report-category-${i}`} key={c}><header><p className="eyebrow">0{i+1}</p><h2>{c}</h2></header><div className="report-grid">{reports.filter(r=>r.category===c).map(r=><article className="report-card" key={r.slug}><a href={r.file} target="_blank" rel="noreferrer"><figure><img src={r.preview} alt={`${r.title}第一頁預覽`} loading="lazy"/></figure><div><span>{r.agency} / {r.pages} 頁</span><h3>{r.title}</h3><b>開啟原始報告 ↗</b></div></a></article>)}</div></section>)}
+<aside className="report-disclaimer">本頁提供原始文件索引，不對試驗數據另作合格判定。不同報告的樣品、方法與條件可能不同；採購、工程選材與法規符合性，請查閱完整報告並向專業人員確認。</aside><footer className="mini-footer"><Link href="/">回到首頁</Link><Link href="/products">瀏覽產品型錄</Link></footer></main>}

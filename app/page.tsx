@@ -28,7 +28,7 @@ export default function Home() {
         </Link>
         <nav aria-label="主選單">
           <a href="#technology">核心技術</a><a href="#cycle">循環產業</a>
-          <Link href="/products">司木商品</Link><Link href="/videos">影片紀錄</Link><a href="#about">關於集團</a>
+          <Link href="/products">司木商品</Link><Link href="/videos">影片紀錄</Link><Link href="/reports">檢測資料</Link><a href="#about">關於集團</a>
         </nav>
         <a className="nav-cta" href="#contact">洽詢合作 <span>↗</span></a>
       </header>
@@ -91,6 +91,7 @@ export default function Home() {
         <div><p className="eyebrow">FIELD NOTES / FILM ARCHIVE</p><h2>不只說明理念<br/>也記錄實際過程</h2><p>從環境治理、材料加工到產品應用，觀看七段現場影片。</p><Link className="button outline" href="/videos">瀏覽全部影片</Link></div>
         <Link className="film-preview-image" href="/videos#landfill-recovery"><img src="/videos/landfill-recovery.jpg" alt="掩埋垃圾場治理影片封面" loading="lazy"/><span>掩埋垃圾場開挖治理與生產過程介紹 →</span></Link>
       </section>
+      <section className="reports-preview"><p className="eyebrow">TEST REPORT ARCHIVE</p><div><h2>測試與檢測文件<br/>回到原始資料</h2><p>耐候、材料與產品檢測報告集中整理，保留完整原始文件供查閱。</p></div><Link className="button outline" href="/reports">查看檢測資料</Link></section>
       <section className="about" id="about">
         <div className="section-intro"><p className="eyebrow">OUR JOURNEY · 04</p><h2>從製造走向<br/>全球環境治理</h2></div>
         <figure className="team-photo"><img src="/technology-team.jpg" alt="GTC 技術團隊研討垃圾治理方案"/><figcaption>技術團隊進行垃圾治理方案研討</figcaption></figure>
