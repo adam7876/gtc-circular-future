@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       <section className="films-preview">
-        <div><p className="eyebrow">FIELD NOTES / FILM ARCHIVE</p><h2>不只說明理念<br/>也記錄實際過程</h2><p>從環境治理、材料加工到產品應用，觀看七段現場影片。</p><Link className="button outline" href="/videos">瀏覽全部影片</Link></div>
+        <div><p className="eyebrow">FIELD NOTES / FILM ARCHIVE</p><h2>不只說明理念<br/>也記錄實際過程</h2><p>從環境治理、材料加工到產品應用，觀看八段現場影片。</p><Link className="button outline" href="/videos">瀏覽全部影片</Link></div>
         <Link className="film-preview-image" href="/videos#landfill-recovery"><img src="/videos/landfill-recovery.jpg" alt="掩埋垃圾場治理影片封面" loading="lazy"/><span>掩埋垃圾場開挖治理與生產過程介紹 →</span></Link>
       </section>
       <section className="reports-preview"><p className="eyebrow">TEST REPORT ARCHIVE</p><div><h2>測試與檢測文件<br/>回到原始資料</h2><p>耐候、材料與產品檢測報告集中整理，保留完整原始文件供查閱。</p></div><Link className="button outline" href="/reports">查看檢測資料</Link></section>
