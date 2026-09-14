@@ -27,10 +27,10 @@ export default function Home() {
           <span className="brand-mark">G</span><span>GTC</span><small>GLOBAL HOLDING</small>
         </Link>
         <nav aria-label="主選單">
-          <a href="#technology">核心技術</a><a href="#cycle">循環產業</a>
+          <Link href="/governance">治理合作</Link><a href="#technology">核心技術</a><a href="#cycle">循環產業</a>
           <Link href="/products">司木商品</Link><Link href="/videos">影片紀錄</Link><Link href="/reports">檢測資料</Link><a href="#about">關於集團</a>
         </nav>
-        <a className="nav-cta" href="#contact">洽詢合作 <span>↗</span></a>
+        <Link className="nav-cta" href="/governance#cooperation">洽詢合作 <span>↗</span></Link>
       </header>
 
       <section className="hero">
@@ -38,7 +38,7 @@ export default function Home() {
           <div className="hero-kicker"><span>GTC / 2026</span><p className="eyebrow">MIXED WASTE PLASTIC RESOURCEIZATION</p></div>
           <h1><span className="hero-line">讓廢棄物</span><span className="hero-line hero-emphasis">回到資源的位置</span></h1>
           <p className="hero-lead">以混雜廢塑資源化技術，串連材料、製造、使用與回收，讓一次性的終點成為下一次生產的起點。</p>
-          <div className="hero-actions"><a className="button primary" href="#technology">探索循環技術</a><Link className="text-link" href="/products">查看司木商品 <span>→</span></Link></div>
+          <div className="hero-actions"><Link className="button primary" href="/governance">了解垃圾治理方案</Link><a className="text-link" href="#technology">查看核心技術 <span>↓</span></a></div>
         </div>
         <div className="hero-facts" aria-label="核心技術重點">
           <div className="hero-fact-index">01</div>
@@ -51,6 +51,19 @@ export default function Home() {
       <section className="statement">
         <p>OUR BELIEF</p><h2>消除廢棄與污染<br/>讓自然<span>重新再生</span></h2>
         <div className="statement-side">從減量、再用、維修、翻新、再製造、再利用到回收，GTC 以 7R 思維重新安排材料的生命週期。</div>
+      </section>
+
+      <section className="governance-preview">
+        <div className="governance-preview-copy">
+          <p className="eyebrow">PUBLIC SECTOR PARTNERSHIP</p>
+          <h2>從掩埋場問題<br/>走到可評估的治理方案</h2>
+          <p>為政府、城市與公共事業單位整理治理範圍、處理流程、現有證據，以及啟動場址評估所需的資料。</p>
+          <Link className="button outline" href="/governance">進入垃圾治理合作頁</Link>
+        </div>
+        <Link className="governance-preview-image" href="/governance#evidence">
+          <img src="/videos/landfill-recovery.jpg" alt="掩埋垃圾場開挖治理現場" loading="lazy" />
+          <span>查看治理現場與既有驗證</span>
+        </Link>
       </section>
 
       <section className="technology" id="technology">
@@ -77,7 +90,7 @@ export default function Home() {
       </section>
 
       <section className="cycle" id="cycle">
-        <div className="section-intro light"><p className="eyebrow">NATURE'S CYCLE · 02</p><h2>大自然循環經濟<br/>六大產業鏈</h2><p>不只處理塑膠，而是以生態平衡為目標，將不同環境問題納入同一個循環系統。</p></div>
+        <div className="section-intro light"><p className="eyebrow">NATURE&apos;S CYCLE · 02</p><h2>大自然循環經濟<br/>六大產業鏈</h2><p>不只處理塑膠，而是以生態平衡為目標，將不同環境問題納入同一個循環系統。</p></div>
         <div className="chain-list">{chains.map(([n,t,d])=><article key={n}><b>{n}</b><h3>{t}</h3><p>{d}</p><span>↗</span></article>)}</div>
       </section>
 
@@ -89,7 +102,7 @@ export default function Home() {
 
       <section className="films-preview">
         <div><p className="eyebrow">FIELD NOTES / FILM ARCHIVE</p><h2>不只說明理念<br/>也記錄實際過程</h2><p>從環境治理、材料加工到產品應用，觀看八段現場影片。</p><Link className="button outline" href="/videos">瀏覽全部影片</Link></div>
-        <Link className="film-preview-image" href="/videos#landfill-recovery"><img src="/videos/landfill-recovery.jpg" alt="掩埋垃圾場治理影片封面" loading="lazy"/><span>掩埋垃圾場開挖治理與生產過程介紹 →</span></Link>
+        <Link className="film-preview-image" href="/videos#siwood-natural-grain"><img src="/videos/siwood-natural-grain.jpg" alt="司木生產時自然形成的木紋纖維影片封面" loading="lazy"/><span>司木生產時自然形成的木紋纖維 →</span></Link>
       </section>
       <section className="reports-preview"><p className="eyebrow">TEST REPORT ARCHIVE</p><div><h2>測試與檢測文件<br/>回到原始資料</h2><p>耐候、材料與產品檢測報告集中整理，保留完整原始文件供查閱。</p></div><Link className="button outline" href="/reports">查看檢測資料</Link></section>
       <section className="about" id="about">
@@ -100,7 +113,7 @@ export default function Home() {
 
       <section className="vision"><div><p className="eyebrow">ESG · SDGs · GRS</p><h2>環境責任<br/>不只是一句口號</h2></div><p>以 ESG 作為經營視角、呼應聯合國永續發展目標，並以全球回收標準的材料追溯、社會責任、環境與化學品管理四大面向，持續建立可驗證的綠色供應鏈。</p></section>
 
-      <footer id="contact"><div className="footer-lead"><p>RETURN VALUE TO THE EARTH</p><h2>把今日的廢棄物<br/>變成下一代的資源</h2><a href="tel:+88665811589">+886 6 581 1589 ↗</a></div><div className="footer-meta"><div><b>GTC 全球控股集團</b><p>台南市善化區溪美里溪尾 72-36 號</p></div><div><b>網站導覽</b><Link href="/products">司木商品</Link><a href="#technology">核心技術</a><a href="#about">集團沿革</a></div></div><p className="copyright">© 2026 GTC GLOBAL HOLDING GROUP. CONTENT ADAPTED FROM THE CORPORATE PROFILE.</p></footer>
+      <footer id="contact"><div className="footer-lead"><p>RETURN VALUE TO THE EARTH</p><h2>把今日的廢棄物<br/>變成下一代的資源</h2><a href="tel:+88665811589">+886 6 581 1589 ↗</a></div><div className="footer-meta"><div><b>GTC 全球控股集團</b><p>台南市善化區溪美里溪尾 72-36 號</p></div><div><b>網站導覽</b><Link href="/governance">垃圾治理合作</Link><Link href="/products">司木商品</Link><a href="#technology">核心技術</a><a href="#about">集團沿革</a></div></div><p className="copyright">© 2026 GTC GLOBAL HOLDING GROUP. CONTENT ADAPTED FROM THE CORPORATE PROFILE.</p></footer>
     </main>
   );
 }
