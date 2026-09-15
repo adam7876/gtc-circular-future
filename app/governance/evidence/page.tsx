@@ -11,18 +11,21 @@ export const metadata: Metadata = {
 const observedStages = [
   {
     number: "01",
+    time: "約 00:24",
     title: "場址與作業環境",
     description:
       "影片可見垃圾堆置區、工程車輛與作業設施，呈現治理工作所處的現場尺度。公開素材未標示拍攝地點與日期。",
   },
   {
     number: "02",
+    time: "約 02:14",
     title: "前端分選流程",
     description:
       "影片可見輸送與分選設備處理混合物料。畫面可說明流程存在，但不能據此推算設備處理量或回收率。",
   },
   {
     number: "03",
+    time: "約 04:03",
     title: "後端材料製造",
     description:
       "影片記錄分選後材料進入製造端的作業情境，提供資源化去向的視覺紀錄；完整物料平衡仍需專案數據支持。",
@@ -119,19 +122,11 @@ export default function GovernanceEvidencePage() {
       <section className="gov-field-record" id="field-record">
         <header className="gov-evidence-section-heading">
           <p className="eyebrow">FIELD RECORD / 02</p>
-          <h2>一段影片<br/>三個可觀察階段</h2>
+          <h2>先看原始影片<br/>再閱讀觀察整理</h2>
           <p>
-            以下畫面擷取自 GTC 提供的「掩埋垃圾場開挖治理與生產過程介紹」。說明僅限於畫面可辨識內容，不以影像推定未揭露的工程數據。
+            以下直接呈現你提供的「掩埋垃圾場開挖治理與生產過程介紹」原始影片。觀察整理僅限於影片可辨識內容，不以影像推定未揭露的工程數據。
           </p>
         </header>
-        <div className="gov-observed-stages">
-          {observedStages.map((stage) => (
-            <article key={stage.number}>
-              <span>{stage.number}</span>
-              <div><h3>{stage.title}</h3><p>{stage.description}</p></div>
-            </article>
-          ))}
-        </div>
         <div className="gov-evidence-video">
           <video controls playsInline preload="metadata" aria-label="掩埋垃圾場開挖治理與生產過程介紹">
             <source src="/videos/landfill-recovery.mp4" type="video/mp4" />
@@ -140,9 +135,21 @@ export default function GovernanceEvidencePage() {
           <div>
             <p className="eyebrow">FULL FIELD FILM</p>
             <h3>掩埋垃圾場開挖治理與生產過程介紹</h3>
-            <p>完整影片約五分鐘。影片可作為初步流程理解，正式查證仍應搭配場址文件、設備規格與運轉紀錄。</p>
+            <p>使用者提供的原始影片，完整長度約五分鐘。影片可作為初步流程理解，正式查證仍應搭配場址文件、設備規格與運轉紀錄。</p>
             <Link href="/videos#landfill-recovery">前往影片專區查看說明 <span>↗</span></Link>
           </div>
+        </div>
+        <div className="gov-observed-label">
+          <p className="eyebrow">OBSERVED IN THE FILM</p>
+          <p>下列時間為方便查找的約略位置，請以播放器顯示為準。</p>
+        </div>
+        <div className="gov-observed-stages">
+          {observedStages.map((stage) => (
+            <article key={stage.number}>
+              <span>{stage.number}</span>
+              <div><small>{stage.time}</small><h3>{stage.title}</h3><p>{stage.description}</p></div>
+            </article>
+          ))}
         </div>
       </section>
 
