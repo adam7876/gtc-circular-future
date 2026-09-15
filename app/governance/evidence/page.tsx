@@ -8,24 +8,21 @@ export const metadata: Metadata = {
     "整理 GTC 垃圾治理現場影片、公司簡報中的專案紀錄、產品檢測文件，以及政府專案仍需補充查證的資料。",
 };
 
-const fieldFrames = [
+const observedStages = [
   {
     number: "01",
-    image: "/evidence/landfill-context.jpg",
     title: "場址與作業環境",
     description:
       "影片可見垃圾堆置區、工程車輛與作業設施，呈現治理工作所處的現場尺度。公開素材未標示拍攝地點與日期。",
   },
   {
     number: "02",
-    image: "/evidence/landfill-sorting.jpg",
     title: "前端分選流程",
     description:
       "影片可見輸送與分選設備處理混合物料。畫面可說明流程存在，但不能據此推算設備處理量或回收率。",
   },
   {
     number: "03",
-    image: "/evidence/landfill-output.jpg",
     title: "後端材料製造",
     description:
       "影片記錄分選後材料進入製造端的作業情境，提供資源化去向的視覺紀錄；完整物料平衡仍需專案數據支持。",
@@ -93,10 +90,6 @@ export default function GovernanceEvidencePage() {
             <Link href="/governance/intake">開始場址初評 <span>↗</span></Link>
           </div>
         </div>
-        <figure>
-          <img src="/evidence/landfill-context.jpg" alt="垃圾治理影片中的場址與工程作業環境" />
-          <figcaption>公開影片畫面擷取 / 場址與拍攝日期尚未於資料中標示</figcaption>
-        </figure>
       </section>
 
       <section className="gov-evidence-position">
@@ -131,19 +124,16 @@ export default function GovernanceEvidencePage() {
             以下畫面擷取自 GTC 提供的「掩埋垃圾場開挖治理與生產過程介紹」。說明僅限於畫面可辨識內容，不以影像推定未揭露的工程數據。
           </p>
         </header>
-        <div className="gov-field-frames">
-          {fieldFrames.map((frame) => (
-            <figure key={frame.number}>
-              <img src={frame.image} alt={frame.title} loading="lazy" />
-              <figcaption>
-                <span>{frame.number}</span>
-                <div><h3>{frame.title}</h3><p>{frame.description}</p></div>
-              </figcaption>
-            </figure>
+        <div className="gov-observed-stages">
+          {observedStages.map((stage) => (
+            <article key={stage.number}>
+              <span>{stage.number}</span>
+              <div><h3>{stage.title}</h3><p>{stage.description}</p></div>
+            </article>
           ))}
         </div>
         <div className="gov-evidence-video">
-          <video controls playsInline preload="none" poster="/videos/landfill-recovery.jpg" aria-label="掩埋垃圾場開挖治理與生產過程介紹">
+          <video controls playsInline preload="metadata" aria-label="掩埋垃圾場開挖治理與生產過程介紹">
             <source src="/videos/landfill-recovery.mp4" type="video/mp4" />
             您的瀏覽器不支援影片播放，請<a href="/videos/landfill-recovery.mp4">開啟影片</a>觀看。
           </video>
