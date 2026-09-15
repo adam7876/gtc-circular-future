@@ -136,7 +136,7 @@ export default function GovernancePage() {
             <source src="/videos/landfill-recovery.mp4" type="video/mp4" />
             您的瀏覽器不支援影片播放，請<a href="/videos/landfill-recovery.mp4">開啟影片</a>觀看。
           </video>
-          <p>使用者提供原始影片 / 掩埋垃圾場開挖治理與生產過程介紹</p>
+          <p>GTC 提供原始影片 / 掩埋垃圾場開挖治理與生產過程介紹</p>
         </div>
         <div className="evidence-copy">
           <p className="eyebrow">FIELD EVIDENCE / 03</p>

@@ -124,7 +124,7 @@ export default function GovernanceEvidencePage() {
           <p className="eyebrow">FIELD RECORD / 02</p>
           <h2>先看原始影片<br/>再閱讀觀察整理</h2>
           <p>
-            以下直接呈現你提供的「掩埋垃圾場開挖治理與生產過程介紹」原始影片。觀察整理僅限於影片可辨識內容，不以影像推定未揭露的工程數據。
+            以下直接呈現 GTC 提供的「掩埋垃圾場開挖治理與生產過程介紹」原始影片。觀察整理僅限於影片可辨識內容，不以影像推定未揭露的工程數據。
           </p>
         </header>
         <div className="gov-evidence-video">
@@ -135,7 +135,7 @@ export default function GovernanceEvidencePage() {
           <div>
             <p className="eyebrow">FULL FIELD FILM</p>
             <h3>掩埋垃圾場開挖治理與生產過程介紹</h3>
-            <p>使用者提供的原始影片，完整長度約五分鐘。影片可作為初步流程理解，正式查證仍應搭配場址文件、設備規格與運轉紀錄。</p>
+            <p>GTC 提供的原始影片，完整長度約五分鐘。影片可作為初步流程理解，正式查證仍應搭配場址文件、設備規格與運轉紀錄。</p>
             <Link href="/videos#landfill-recovery">前往影片專區查看說明 <span>↗</span></Link>
           </div>
         </div>

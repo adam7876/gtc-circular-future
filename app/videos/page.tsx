@@ -11,7 +11,7 @@ export default function VideosPage(){
  <video controls playsInline preload="none" poster={`/videos/${v.slug}.jpg`} aria-label={v.title} aria-describedby={`${v.slug}-description`}><source src={`/videos/${v.slug}.mp4`} type="video/mp4"/>您的瀏覽器不支援播放，請<a href={`/videos/${v.slug}.mp4`}>開啟影片</a>觀看。</video>
  <h3>{v.title}</h3><p id={`${v.slug}-description`}>{v.description}</p>{v.products.length>0&&<Link className="text-link" href={`/products/${v.products[0]}`}>查看相關產品 →</Link>}
  </article>)}</div></section>)}
- <aside className="video-note">影片由集團提供；簡介依影片標題與公司資料整理。現場紀錄不取代產品規格、檢驗報告或工程適用性評估。</aside>
+ <aside className="video-note">本頁八段影片皆使用 GTC 提供的原始檔，未加入外部影片素材。簡介依影片標題與公司資料整理；現場紀錄不取代產品規格、檢驗報告或工程適用性評估。</aside>
  <footer className="mini-footer"><Link href="/">回到首頁</Link><Link href="/products">瀏覽產品型錄</Link></footer>
  </main>;
 }
