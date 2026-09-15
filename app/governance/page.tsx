@@ -66,7 +66,7 @@ export default function GovernancePage() {
         <nav aria-label="垃圾治理頁選單">
           <a href="#scope">方案範圍</a>
           <a href="#process">治理流程</a>
-          <a href="#evidence">案例與證據</a>
+          <Link href="/governance/evidence">案例與證據</Link>
           <a href="#cooperation">合作方式</a>
           <Link href="/governance/intake">初評資料表</Link>
         </nav>
@@ -82,7 +82,7 @@ export default function GovernancePage() {
           </p>
           <div className="governance-hero-actions">
             <a className="button primary" href="#cooperation">開始專案初評</a>
-            <a className="text-link" href="#evidence">查看現有證據 <span>↓</span></a>
+            <Link className="text-link" href="/governance/evidence">查看現有證據 <span>↗</span></Link>
           </div>
         </div>
         <div className="governance-hero-index" aria-label="方案摘要">
@@ -148,6 +148,7 @@ export default function GovernancePage() {
             上述專案資訊依 GTC 公司簡報整理。正式評估仍需查閱審查原件、專案邊界、處理數據與持續運轉紀錄。
           </p>
           <div className="evidence-links">
+            <Link href="/governance/evidence">進入案例與證據頁 <span>↗</span></Link>
             <Link href="/videos#landfill-recovery">查看全部現場影片 <span>↗</span></Link>
             <Link href="/reports">查看產品檢測文件 <span>↗</span></Link>
           </div>
@@ -225,6 +226,7 @@ export default function GovernancePage() {
       <footer className="mini-footer governance-footer">
         <Link href="/">回到首頁</Link>
         <Link href="/videos">現場影片</Link>
+        <Link href="/governance/evidence">案例與證據</Link>
         <Link href="/reports">檢測資料</Link>
         <Link href="/governance/intake">初評資料表</Link>
         <span>GTC 全球控股集團</span>

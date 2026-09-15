@@ -60,7 +60,7 @@ export default function Home() {
           <p>為政府、城市與公共事業單位整理治理範圍、處理流程、現有證據，以及啟動場址評估所需的資料。</p>
           <Link className="button outline" href="/governance">進入垃圾治理合作頁</Link>
         </div>
-        <Link className="governance-preview-image" href="/governance#evidence">
+        <Link className="governance-preview-image" href="/governance/evidence">
           <img src="/videos/landfill-recovery.jpg" alt="掩埋垃圾場開挖治理現場" loading="lazy" />
           <span>查看治理現場與既有驗證</span>
         </Link>
