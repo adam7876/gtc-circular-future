@@ -68,6 +68,7 @@ export default function GovernancePage() {
           <a href="#process">治理流程</a>
           <a href="#evidence">案例與證據</a>
           <a href="#cooperation">合作方式</a>
+          <Link href="/governance/intake">初評資料表</Link>
         </nav>
         <a className="nav-cta" href="#contact">提出場址需求 <span>↘</span></a>
       </header>
@@ -161,6 +162,7 @@ export default function GovernancePage() {
             現有檢測文件主要證明再生材料與產品性能。政府採購或城市級治理專案還需要以下場址與工程資料，產品測試不能取代治理成效驗證。
           </p>
         </header>
+        <div className="proof-action"><Link className="button outline" href="/governance/intake">開啟場址初評資料表</Link><span>可直接填寫、列印或另存 PDF</span></div>
         <div className="due-diligence-list">
           {dueDiligence.map(([title, description], index) => (
             <div key={title}>
@@ -215,7 +217,7 @@ export default function GovernancePage() {
         </div>
         <div>
           <p>建議準備：國家與城市、垃圾來源、估計存量或每日產生量、現場照片，以及希望優先解決的環境問題。</p>
-          <a className="button primary" href="tel:+88665811589">致電 +886 6 581 1589</a>
+          <div className="governance-contact-actions"><Link className="button" href="/governance/intake">填寫初評資料表</Link><a className="button primary" href="tel:+88665811589">致電 +886 6 581 1589</a></div>
           <p className="contact-limitation">正式文件與場址資料的傳遞方式，將於初次聯絡後由專人確認。</p>
         </div>
       </section>
@@ -224,6 +226,7 @@ export default function GovernancePage() {
         <Link href="/">回到首頁</Link>
         <Link href="/videos">現場影片</Link>
         <Link href="/reports">檢測資料</Link>
+        <Link href="/governance/intake">初評資料表</Link>
         <span>GTC 全球控股集團</span>
       </footer>
     </main>
