@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
+import { createPageMetadata } from "../lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "城市垃圾治理合作｜GTC 全球控股集團",
   description:
     "面向政府、城市與公共事業單位的垃圾治理合作說明，涵蓋掩埋場開挖、混雜廢塑分選、材料資源化與專案初評資料。",
-};
+  path: "/governance",
+});
 
 const process = [
   {

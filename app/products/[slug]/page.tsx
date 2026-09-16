@@ -5,13 +5,19 @@ import { getProduct, products } from "../data";
 import { videos } from "../../videos/data";
 import { reports } from "../../reports/data";
 import SiteHeader from "../../components/SiteHeader";
+import { createPageMetadata } from "../../lib/site";
 
 export function generateStaticParams() { return products.map(({slug}) => ({ slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{slug:string}> }): Promise<Metadata> {
   const product = getProduct((await params).slug);
   if (!product) return {};
-  return { title: `${product.name}｜GTC 司木產品`, description: product.short, openGraph: { title: product.name, description: product.short, images: [product.image] }, twitter: { card: "summary_large_image", images: [product.image] } };
+  return createPageMetadata({
+    title: `${product.name}｜GTC 司木產品`,
+    description: product.short,
+    path: `/products/${product.slug}`,
+    image: product.image,
+  });
 }
 
 export default async function ProductDetail({ params }: { params: Promise<{slug:string}> }) {

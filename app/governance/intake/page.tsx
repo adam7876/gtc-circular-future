@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PrintButton from "./PrintButton";
 import SiteHeader from "../../components/SiteHeader";
+import { createPageMetadata } from "../../lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "場址初評資料表｜GTC 垃圾治理合作",
   description:
     "政府、城市與公共事業單位可使用此資料表整理垃圾來源、場址條件、既有監測資料與治理目標，作為 GTC 技術初評的討論基礎。",
-};
+  path: "/governance/intake",
+});
 
 const Field = ({ label, wide = false }: { label: string; wide?: boolean }) => (
   <label className={wide ? "intake-field intake-field-wide" : "intake-field"}>

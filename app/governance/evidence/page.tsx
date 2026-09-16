@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { reports } from "../../reports/data";
 import SiteHeader from "../../components/SiteHeader";
+import { createPageMetadata } from "../../lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "垃圾治理案例與證據｜GTC 全球控股集團",
   description:
     "整理 GTC 垃圾治理現場影片、公司簡報中的專案紀錄、產品檢測文件，以及政府專案仍需補充查證的資料。",
-};
+  path: "/governance/evidence",
+});
 
 const observedStages = [
   {

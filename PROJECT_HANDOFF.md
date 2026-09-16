@@ -100,6 +100,14 @@
 - 表單結尾同時提供列印／另存 PDF 與電話聯絡，並重申敏感文件需先確認安全傳遞方式。
 - 若未來要加入真正的線上送出功能，仍需由 GTC 提供正式收件信箱，並決定後端、個資告知及檔案保存政策。
 
+## 已完成：搜尋、分享與結構化資料基礎
+
+- 新增 `/sitemap.xml`，涵蓋首頁、治理、證據、初評、產品、影片、報告及全部商品詳細頁。
+- 新增 `/robots.txt` 與 `/manifest.webmanifest`。
+- 所有主要頁面及商品詳細頁均有獨立 canonical、Open Graph 與 Twitter 分享資料。
+- 根版面加入 Organization 與 WebSite JSON-LD，使用網站公開的名稱、電話與台南地址。
+- canonical 目前固定為 `https://gtc-circular-future.vercel.app`；若日後綁定自訂網域，須同步更新 `app/lib/site.ts`。
+
 ## 下一步實作原則
 
 - 先盤點現有簡報能證明哪些治理數據，不能證明的數字不可自行補寫。

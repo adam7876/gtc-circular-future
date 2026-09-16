@@ -1,6 +1,13 @@
 import Link from "next/link";
 import ProductCatalog from "./ProductCatalog";
 import SiteHeader from "../components/SiteHeader";
+import { createPageMetadata } from "../lib/site";
+
+export const metadata = createPageMetadata({
+  title: "司木產品型錄｜GTC",
+  description: "瀏覽源司木、精司木、艾司木、樂司木、森司木，以及建築、室內、家具與循環棧板等產品應用。",
+  path: "/products",
+});
 
 export default function ProductsPage() {
   return <main className="catalog-page">
