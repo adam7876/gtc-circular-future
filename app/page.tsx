@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { products } from "./products/data";
+import SiteHeader from "./components/SiteHeader";
 
 const chains = [
   ["01", "垃圾治理", "將難以回收的混雜廢塑轉化為可再次製造的材料。"],
@@ -22,16 +23,7 @@ const milestones = [
 export default function Home() {
   return (
     <main>
-      <header className="nav-wrap">
-        <Link className="brand" href="/" aria-label="GTC 全球控股集團首頁">
-          <span className="brand-mark">G</span><span>GTC</span><small>GLOBAL HOLDING</small>
-        </Link>
-        <nav aria-label="主選單">
-          <Link href="/governance">治理合作</Link><a href="#technology">核心技術</a><a href="#cycle">循環產業</a>
-          <Link href="/products">司木商品</Link><Link href="/videos">影片紀錄</Link><Link href="/reports">檢測資料</Link><a href="#about">關於集團</a>
-        </nav>
-        <Link className="nav-cta" href="/governance#cooperation">洽詢合作 <span>↗</span></Link>
-      </header>
+      <SiteHeader />
 
       <section className="hero">
         <div className="hero-copy">

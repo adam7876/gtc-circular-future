@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PrintButton from "./PrintButton";
+import SiteHeader from "../../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "場址初評資料表｜GTC 垃圾治理合作",
@@ -22,12 +23,7 @@ const Check = ({ children }: { children: React.ReactNode }) => (
 export default function GovernanceIntakePage() {
   return (
     <main className="intake-page">
-      <header className="intake-nav">
-        <Link className="brand" href="/" aria-label="GTC 全球控股集團首頁">
-          <span className="brand-mark">G</span><span>GTC</span><small>GLOBAL HOLDING</small>
-        </Link>
-        <Link href="/governance">返回垃圾治理合作頁</Link>
-      </header>
+      <SiteHeader />
 
       <section className="intake-hero">
         <div>

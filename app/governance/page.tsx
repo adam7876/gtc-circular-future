@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "城市垃圾治理合作｜GTC 全球控股集團",
@@ -59,19 +60,7 @@ const dueDiligence = [
 export default function GovernancePage() {
   return (
     <main className="governance-page">
-      <header className="governance-nav">
-        <Link className="brand" href="/" aria-label="GTC 全球控股集團首頁">
-          <span className="brand-mark">G</span><span>GTC</span><small>GLOBAL HOLDING</small>
-        </Link>
-        <nav aria-label="垃圾治理頁選單">
-          <a href="#scope">方案範圍</a>
-          <a href="#process">治理流程</a>
-          <Link href="/governance/evidence">案例與證據</Link>
-          <a href="#cooperation">合作方式</a>
-          <Link href="/governance/intake">初評資料表</Link>
-        </nav>
-        <a className="nav-cta" href="#contact">提出場址需求 <span>↘</span></a>
-      </header>
+      <SiteHeader />
 
       <section className="governance-hero">
         <div className="governance-hero-copy">
@@ -81,7 +70,8 @@ export default function GovernancePage() {
             面對陳年掩埋場與難以進入既有回收鏈的混雜廢塑，GTC 將開挖治理、精細分選與材料再製造放在同一條處理路徑中。
           </p>
           <div className="governance-hero-actions">
-            <a className="button primary" href="#cooperation">開始專案初評</a>
+            <Link className="button primary" href="/governance/intake">填寫場址初評</Link>
+            <a className="text-link" href="#cooperation">了解合作流程 <span>↓</span></a>
             <Link className="text-link" href="/governance/evidence">查看現有證據 <span>↗</span></Link>
           </div>
         </div>

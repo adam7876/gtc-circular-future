@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { reports } from "../../reports/data";
+import SiteHeader from "../../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "垃圾治理案例與證據｜GTC 全球控股集團",
@@ -66,18 +67,7 @@ const featuredReports = reports.filter((report) =>
 export default function GovernanceEvidencePage() {
   return (
     <main className="gov-evidence-page">
-      <header className="governance-nav gov-evidence-nav">
-        <Link className="brand" href="/" aria-label="GTC 全球控股集團首頁">
-          <span className="brand-mark">G</span><span>GTC</span><small>GLOBAL HOLDING</small>
-        </Link>
-        <nav aria-label="案例與證據頁選單">
-          <a href="#field-record">現場紀錄</a>
-          <a href="#project-record">專案敘述</a>
-          <a href="#evidence-register">證據邊界</a>
-          <a href="#next-review">下一步查證</a>
-        </nav>
-        <Link className="nav-cta" href="/governance">返回治理合作 <span>↗</span></Link>
-      </header>
+      <SiteHeader />
 
       <section className="gov-evidence-hero">
         <div>
