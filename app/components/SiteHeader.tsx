@@ -28,7 +28,15 @@ const navigationGroups = [
   },
 ];
 
-export default function SiteHeader() {
+export default function SiteHeader({
+  ctaLabel = "填寫場址初評",
+  ctaShortLabel = "填寫初評",
+  ctaHref = "/governance/intake",
+}: {
+  ctaLabel?: string;
+  ctaShortLabel?: string;
+  ctaHref?: string;
+}) {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="GTC 全球控股集團首頁">
@@ -47,11 +55,15 @@ export default function SiteHeader() {
         ))}
       </nav>
 
-      <Link className="site-primary-cta" href="/governance/intake">
-        <span className="site-cta-long">填寫場址初評</span>
-        <span className="site-cta-short">填寫初評</span>
-        <b>↗</b>
-      </Link>
+      {ctaHref.startsWith("tel:") ? (
+        <a className="site-primary-cta" href={ctaHref}>
+          <span className="site-cta-long">{ctaLabel}</span><span className="site-cta-short">{ctaShortLabel}</span><b>↗</b>
+        </a>
+      ) : (
+        <Link className="site-primary-cta" href={ctaHref}>
+          <span className="site-cta-long">{ctaLabel}</span><span className="site-cta-short">{ctaShortLabel}</span><b>↗</b>
+        </Link>
+      )}
 
       <details className="site-mobile-nav">
         <summary>選單<span aria-hidden="true">＋</span></summary>
@@ -63,7 +75,7 @@ export default function SiteHeader() {
               {group.links.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
             </section>
           ))}
-          <Link className="site-mobile-primary" href="/governance/intake">開始場址初評 <span>↗</span></Link>
+          {ctaHref.startsWith("tel:") ? <a className="site-mobile-primary" href={ctaHref}>{ctaLabel} <span>↗</span></a> : <Link className="site-mobile-primary" href={ctaHref}>{ctaLabel} <span>↗</span></Link>}
         </div>
       </details>
     </header>
