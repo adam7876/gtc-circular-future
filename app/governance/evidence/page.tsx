@@ -9,6 +9,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "整理 GTC 垃圾治理現場影片、公司簡報中的專案紀錄、產品檢測文件，以及政府專案仍需補充查證的資料。",
   path: "/governance/evidence",
+  alternatePath: "/en/governance/evidence",
 });
 
 const observedStages = [

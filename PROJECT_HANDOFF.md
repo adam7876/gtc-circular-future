@@ -42,6 +42,7 @@
 - `/governance`：政府與城市垃圾治理合作頁，整理治理範圍、流程、現有證據、專案評估資料與合作方式
 - `/governance/evidence`：垃圾治理案例與證據頁，分開呈現現場影片、公司簡報敘述、產品檢測及尚待查證的專案資料
 - `/governance/intake`：可在瀏覽器填寫並列印的場址初評資料表；不會上傳或儲存訪客輸入
+- `/en`：完整英文首頁，並延伸至英文治理、證據、初評、產品、影片與報告頁
 
 產品名稱需依型錄圖片原文，不可自行改名。已特別修正為源司木、精司木、艾司木、樂司木、森司木等正確名稱。
 
@@ -107,6 +108,15 @@
 - 所有主要頁面及商品詳細頁均有獨立 canonical、Open Graph 與 Twitter 分享資料。
 - 根版面加入 Organization 與 WebSite JSON-LD，使用網站公開的名稱、電話與台南地址。
 - canonical 目前固定為 `https://gtc-circular-future.vercel.app`；若日後綁定自訂網域，須同步更新 `app/lib/site.ts`。
+
+## 已完成：完整英文版（待本次發布）
+
+- 新增 `/en` 英文首頁，以及 `/en/governance`、`/en/governance/evidence`、`/en/governance/intake`、`/en/products`、`/en/videos`、`/en/reports`。
+- 11 項商品均有 `/en/products/[slug]` 英文詳細頁，並維持與影片、檢測報告的關聯。
+- 共用導覽依語言切換所有連結與 CTA；中文頁提供 `EN`，英文頁提供 `中文`。
+- 英文政府合作內容保留證據限制，不把公司簡報敘述、現場影片或產品試驗擴張為治理績效保證。
+- 中英文頁加入互相對應的 `hreflang`、canonical 與 Open Graph locale；sitemap 同時收錄兩種語言及全部商品頁。
+- 根頁仍以 `zh-Hant` 為 HTML 文件語言；英文路由以 `lang="en"` 包覆英文內容，並由 hreflang 標明語系對應。若日後要讓根 `<html lang>` 隨路由切換，需進一步重構最上層路由版面。
 
 ## 下一步實作原則
 

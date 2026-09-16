@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { videos, videoCategories } from "./data";
 import SiteHeader from "../components/SiteHeader";
 import { createPageMetadata } from "../lib/site";
-export const metadata: Metadata = createPageMetadata({title:"影片紀錄｜GTC",description:"從掩埋場治理、司木加工到棧板應用，觀看 GTC 提供的材料與製造現場原始影片。",path:"/videos"});
+export const metadata: Metadata = createPageMetadata({title:"影片紀錄｜GTC",description:"從掩埋場治理、司木加工到棧板應用，觀看 GTC 提供的材料與製造現場原始影片。",path:"/videos",alternatePath:"/en/videos"});
 export default function VideosPage(){
  return <main className="video-page">
  <SiteHeader />

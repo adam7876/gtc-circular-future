@@ -8,6 +8,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "面向政府、城市與公共事業單位的垃圾治理合作說明，涵蓋掩埋場開挖、混雜廢塑分選、材料資源化與專案初評資料。",
   path: "/governance",
+  alternatePath: "/en/governance",
 });
 
 const process = [

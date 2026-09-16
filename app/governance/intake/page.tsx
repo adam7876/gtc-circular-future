@@ -9,6 +9,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "政府、城市與公共事業單位可使用此資料表整理垃圾來源、場址條件、既有監測資料與治理目標，作為 GTC 技術初評的討論基礎。",
   path: "/governance/intake",
+  alternatePath: "/en/governance/intake",
 });
 
 const Field = ({ label, wide = false }: { label: string; wide?: boolean }) => (

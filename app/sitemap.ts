@@ -4,23 +4,36 @@ import { SITE_URL } from "./lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: SITE_URL, lastModified, changeFrequency: "monthly", priority: 1 },
-    { url: `${SITE_URL}/governance`, lastModified, changeFrequency: "monthly", priority: 0.95 },
-    { url: `${SITE_URL}/governance/evidence`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/governance/intake`, lastModified, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${SITE_URL}/products`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${SITE_URL}/videos`, lastModified, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${SITE_URL}/reports`, lastModified, changeFrequency: "monthly", priority: 0.8 },
-  ];
+  const staticPairs = [
+    ["", "/en", 1],
+    ["/governance", "/en/governance", 0.95],
+    ["/governance/evidence", "/en/governance/evidence", 0.9],
+    ["/governance/intake", "/en/governance/intake", 0.8],
+    ["/products", "/en/products", 0.9],
+    ["/videos", "/en/videos", 0.75],
+    ["/reports", "/en/reports", 0.8],
+  ] as const;
+
+  const staticPages: MetadataRoute.Sitemap = staticPairs.flatMap(([zhPath, enPath, priority]) => {
+    const zhUrl = `${SITE_URL}${zhPath}`;
+    const enUrl = `${SITE_URL}${enPath}`;
+    const languages = { "zh-Hant": zhUrl, en: enUrl, "x-default": zhUrl };
+    return [
+      { url: zhUrl, lastModified, changeFrequency: "monthly" as const, priority, alternates: { languages } },
+      { url: enUrl, lastModified, changeFrequency: "monthly" as const, priority, alternates: { languages } },
+    ];
+  });
 
   return [
     ...staticPages,
-    ...products.map((product) => ({
-      url: `${SITE_URL}/products/${product.slug}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    })),
+    ...products.flatMap((product) => {
+      const zhUrl = `${SITE_URL}/products/${product.slug}`;
+      const enUrl = `${SITE_URL}/en/products/${product.slug}`;
+      const languages = { "zh-Hant": zhUrl, en: enUrl, "x-default": zhUrl };
+      return [
+        { url: zhUrl, lastModified, changeFrequency: "monthly" as const, priority: 0.75, alternates: { languages } },
+        { url: enUrl, lastModified, changeFrequency: "monthly" as const, priority: 0.75, alternates: { languages } },
+      ];
+    }),
   ];
 }

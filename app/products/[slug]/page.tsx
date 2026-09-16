@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{slug:strin
     title: `${product.name}｜GTC 司木產品`,
     description: product.short,
     path: `/products/${product.slug}`,
+    alternatePath: `/en/products/${product.slug}`,
     image: product.image,
   });
 }

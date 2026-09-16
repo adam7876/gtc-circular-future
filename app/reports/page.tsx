@@ -1,5 +1,5 @@
 import Link from "next/link"; import type { Metadata } from "next"; import {reports,reportCategories} from "./data"; import SiteHeader from "../components/SiteHeader"; import {createPageMetadata} from "../lib/site";
-export const metadata:Metadata=createPageMetadata({title:"檢測資料｜GTC",description:"瀏覽 GTC 司木材料與產品的原始測試及檢測報告。",path:"/reports"});
+export const metadata:Metadata=createPageMetadata({title:"檢測資料｜GTC",description:"瀏覽 GTC 司木材料與產品的原始測試及檢測報告。",path:"/reports",alternatePath:"/en/reports"});
 export default function ReportsPage(){return <main className="reports-page"><SiteHeader />
 <section className="reports-intro"><p className="eyebrow">TEST REPORT ARCHIVE</p><h1>檢測資料</h1><p>集中保存材料與產品的原始測試文件<br/>檢測條件、樣品及結果請以報告原文為準</p></section>
 <nav className="report-index" aria-label="報告分類">{reportCategories.map((c,i)=><a href={`#report-category-${i}`} key={c}>{c}<span>{reports.filter(r=>r.category===c).length}</span></a>)}</nav>

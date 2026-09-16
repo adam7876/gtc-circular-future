@@ -46,7 +46,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         "@id": `${SITE_URL}/#website`,
         name: SITE_NAME,
         url: SITE_URL,
-        inLanguage: "zh-Hant",
+    inLanguage: ["zh-Hant", "en"],
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
     ],

@@ -7,6 +7,7 @@ export const metadata = createPageMetadata({
   title: "GTC 全球控股集團｜讓廢棄物回到資源的位置",
   description: "GTC 以混雜廢塑資源化技術與司木循環材料，推動垃圾治理、再生製造與環境永續。",
   path: "/",
+  alternatePath: "/en",
 });
 
 const chains = [
